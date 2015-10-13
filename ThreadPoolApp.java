@@ -8,8 +8,8 @@ public class ThreadPoolApp{
         if (args.length<2)
             ThreadPoolApp.error();
         try{
-            int numberJobs = Integer.parseInt(args[0]);
-            int numberThreads= Integer.parseInt(args[1]);
+            int numberJobs = Integer.parseInt(args[0]); //job numbers
+            int numberThreads= Integer.parseInt(args[1]); //thread numbers
             if ((numberJobs <1 || numberThreads <1))
                 ThreadPoolApp.error();
             ExecutorService pool = Executors.newFixedThreadPool(numberThreads);
