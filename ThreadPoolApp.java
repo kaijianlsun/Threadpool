@@ -16,7 +16,7 @@ public class ThreadPoolApp{
             Job [] jobs = new Job[numberJobs]; 
             for(int i=0; i<numberJobs; i++){
                 jobs[i] = new Job(i);
-                pool.execute(jobs[i]);
+                pool.execute(jobs[i]); //sdfsdfsdf
             }
             pool.shutdown();
             System.out.println ("Last line " + Thread.currentThread().getName());
