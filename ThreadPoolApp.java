@@ -12,8 +12,8 @@ public class ThreadPoolApp{
             int numberThreads= Integer.parseInt(args[1]); //thread numbers
             if ((numberJobs <1 || numberThreads <1))
                 ThreadPoolApp.error();
-            ExecutorService pool = Executors.newFixedThreadPool(numberThreads);
-            Job [] jobs = new Job[numberJobs];
+            ExecutorService pool = Executors.newFixedThreadPool(numberThreads); //Threads Pool
+            Job [] jobs = new Job[numberJobs]; 
             for(int i=0; i<numberJobs; i++){
                 jobs[i] = new Job(i);
                 pool.execute(jobs[i]);
